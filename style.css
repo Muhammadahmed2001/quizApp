@@ -82,8 +82,7 @@
 }
 
 /*Button*/
-button {
-    width: 90%;
+.form button {
     background-color: #0066ff;
     color: #fff;
     border: 0;
@@ -95,6 +94,6 @@ button {
     transition: background-color .3s ease;
 }
 
-button:hover {
+.form button:hover {
     background-color: #005ce6;
 }
