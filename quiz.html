@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body id="body">
     <div id="heading">
         <h2>
-            <span>Test</span>
-            <span>your</span>
-            <span>skills</span>
-            <span>with</span>
-            <span>following</span>
-            <span>Quizzes</span>
-            <span>.</span>
+            Test your skills with following Quizzes
         </h2>
     </div>
     <div class="contanair">
         <div id="button_div" class="main">
             <div class="up">
-                <button onclick="htmlButton()" class="card1">
+                <button onclick="buttonHide()" class="card1">
                     <h1>HTML</h1>
                 </button>
                 <button class="card2">
@@ -38,12 +34,35 @@
             </div>
         </div>
 
-        <div class="quiz-materiel">
-
-
-        </div>
 
     </div>
+    <div id="quiz_materiel" class="quiz-materiel">
+        <!-- <div class="card card-size">
+            <h5 class="card-header">HTML Quiz</h5>
+            <div class="card-body card-inside">
+                <h5 id="question" class="card-title">Special title treatment</h5>
+                <div>
+                    <label>
+                        <input type="radio" name="answer" id="">
+                        <span id="option1"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="answer" id="">
+                        <span id="option2"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="answer" id="">
+                        <span id="option3"></span>
+                    </label>
+                </div> -->
+                <!-- <button onclick="nextQuestion()" class="btn btn-primary">NEXT</button> -->
+            <!-- </div>
+        </div>
+    </div> -->
 
 
 
@@ -51,6 +70,9 @@
 
 
     <script src="quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

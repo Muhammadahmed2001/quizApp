@@ -451,18 +451,62 @@ var javaScript = [
 
 ]
 
-
+var index = 0;
 var buttonDiv = document.getElementById("button_div");
 var heading = document.getElementById("heading");
 var body = document.getElementById("body");
-function htmlButton() {
+var question = document.getElementById("question")
+var option1 = document.getElementById("option1");
+var option2 = document.getElementById("option2");
+var option3 = document.getElementById("option3");
+
+
+function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-    body.style.backgroundColor = "#e1dd72"
+    body.style.backgroundColor = "#E3B448";
+    htmlQuizShow()
 
-    
 }
 
+var quizMateriel = document.getElementById("quiz_materiel")
+function htmlQuizShow() {
+    quizMateriel.innerHTML = `
+    <div class="card card-size">
+            <h5 class="card-header">HTML Quiz</h5>
+            <div class="card-body card-inside">
+                <h5 id="question" class="card-title">${html[index].question}</h5>
+                <div>
+                    <label>
+                        <input type="radio" name="answer" id="">
+                        <span id="option1">${html[index].option1}</span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="answer" id="">
+                        <span id="option2">${html[index].option2}</span>
+                    </label>
+                    </div>
+                <div>
+                <label>
+                <input type="radio" name="answer" id="">
+                <span id="option3">${html[index].option3}</span>
+                </label>
+                </div>
+                <button onclick="${nextQuestion()}" class="btn btn-primary">NEXT</button>
+                </div>
+                </div>
+                `
+}
 
+function nextQuestion() {
+    // question.innerHTML = html[index].question;
+    // option1.innerText = html[index].option1;
+    // option2.innerText = html[index].option2;
+    // option3.innerText = html[index].option3;
+    index++
+    htmlQuizShow()
+}
 
 
