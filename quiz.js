@@ -452,9 +452,14 @@ var javaScript = [
 ]
 
 
+var buttonDiv = document.getElementById("button_div");
+var heading = document.getElementById("heading");
+var body = document.getElementById("body");
+function htmlButton() {
+    heading.style.display = "none";
+    buttonDiv.style.display = "none";
+    body.style.backgroundColor = "#e1dd72"
 
-function html() {
-    
     
 }
 
