@@ -464,13 +464,13 @@ var option3 = document.getElementById("option3");
 function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-    body.style.backgroundColor = "#E3B448";
-    htmlQuizShow()
+    body.style.backgroundColor = "#0e4d1a";
 
 }
 
 var quizMateriel = document.getElementById("quiz_materiel")
 function htmlQuizShow() {
+    buttonHide()
     quizMateriel.innerHTML = `
     <div class="card card-size">
             <h5 class="card-header">HTML Quiz</h5>
@@ -494,19 +494,18 @@ function htmlQuizShow() {
                 <span id="option3">${html[index].option3}</span>
                 </label>
                 </div>
-                <button onclick="${nextQuestion()}" class="btn btn-primary">NEXT</button>
+                <button onclick="nextQuestion()" class="btn btn-primary">NEXT</button>
                 </div>
                 </div>
                 `
 }
 
 function nextQuestion() {
-    // question.innerHTML = html[index].question;
-    // option1.innerText = html[index].option1;
-    // option2.innerText = html[index].option2;
-    // option3.innerText = html[index].option3;
     index++
-    htmlQuizShow()
+    document.getElementById("question").innerText = html[index].question;
+    document.getElementById("option1").innerText = html[index].option1;
+    document.getElementById("option2").innerText = html[index].option2;
+    document.getElementById("option3").innerText = html[index].option3;
 }
 
 
