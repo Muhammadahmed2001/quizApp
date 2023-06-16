@@ -1,3 +1,10 @@
+Swal.fire({
+    icon: 'success',
+    title: 'successful login',
+})
+
+
+
 var html = [
     {
         question: 'What does HTML stand for?',
@@ -464,13 +471,20 @@ var option3 = document.getElementById("option3");
 function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-    body.style.backgroundColor = "#0e4d1a";
-
+    // body.style.backgroundColor = "#0e4d1a";
+    
+}
+function nextQuestion(subject) {
+    index++
+    document.getElementById("question").innerText = subject[index].question;
+    document.getElementById("option1").innerText = subject[index].option1;
+    document.getElementById("option2").innerText = subject[index].option2;
+    document.getElementById("option3").innerText = subject[index].option3;
 }
 
 var quizMateriel = document.getElementById("quiz_materiel")
 function htmlQuizShow() {
-    buttonHide()
+    buttonHide();
     quizMateriel.innerHTML = `
     <div class="card card-size">
             <h5 class="card-header">HTML Quiz</h5>
@@ -494,18 +508,44 @@ function htmlQuizShow() {
                 <span id="option3">${html[index].option3}</span>
                 </label>
                 </div>
-                <button onclick="nextQuestion()" class="btn btn-primary">NEXT</button>
+                <button onclick="nextQuestion(html)" class="btn btn-primary">NEXT</button>
                 </div>
                 </div>
                 `
 }
 
-function nextQuestion() {
-    index++
-    document.getElementById("question").innerText = html[index].question;
-    document.getElementById("option1").innerText = html[index].option1;
-    document.getElementById("option2").innerText = html[index].option2;
-    document.getElementById("option3").innerText = html[index].option3;
+
+
+function cssQuizShow() {
+    buttonHide();
+    quizMateriel.innerHTML = `
+    <div class="card card-size">
+    <h5 class="card-header">HTML Quiz</h5>
+    <div class="card-body card-inside">
+        <h5 id="question" class="card-title">${css[index].question}</h5>
+        <div>
+            <label>
+                <input type="radio" name="answer" id="">
+                <span id="option1">${css[index].option1}</span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="answer" id="">
+                <span id="option2">${css[index].option2}</span>
+            </label>
+            </div>
+        <div>
+        <label>
+        <input type="radio" name="answer" id="">
+        <span id="option3">${css[index].option3}</span>
+        </label>
+        </div>
+        <button onclick="nextQuestion(css)" class="btn btn-primary">NEXT</button>
+        </div>
+        </div>
+    `
+    
 }
 
 
