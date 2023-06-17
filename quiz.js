@@ -84,17 +84,17 @@ var html = [
         correctOption: "<table> <tr> <td>"
     },
     {
-        question: 'Inline elements are normally displayed without starting a new line.',
-        option1: 'True',
-        option2: 'False',
-        correctOption: "True"
+        question: 'Who is the father of HTML?',
+        option1: 'Rasmus Lerdorf',
+        option2: 'Tim Berners-Lee',
+        option3: 'Sergey Brin',
+        correctOption: "Tim Berners-Lee"
     },
     {
         question: "How can you make a numbered list?",
-        option1: '<dl>',
+        option1: '<list>',
         option2: '<ul>',
         option3: '<ol>',
-        option4: '<list>',
         correctOption: "<ol>"
     },
     {
@@ -102,7 +102,6 @@ var html = [
         option1: '<ol>',
         option2: '<list>',
         option3: '<ul>',
-        option4: '<dl>',
         correctOption: "<ul>"
     },
     {
@@ -110,15 +109,13 @@ var html = [
         option1: '<img alt="MyImage">image.gif</img>',
         option2: '<img href="image.gif" alt="MyImage">',
         option3: '<img src="image.gif" alt="MyImage">',
-        option4: '<image src="image.gif" alt="MyImage">',
         correctOption: '<img src="image.gif" alt="MyImage">'
     },
     {
         question: 'What is the correct HTML for making a checkbox?',
         option1: '<iput type="check">',
         option2: '<check>',
-        option3: '<checkbox>',
-        option4: '<input type="checkbox">',
+        option3: '<input type="checkbox">',
         correctOption: '<input type="checkbox">'
     },
     {
@@ -126,15 +123,13 @@ var html = [
         option1: '<input type="textfield">',
         option2: '<input type="text">',
         option3: '<textfield>',
-        option4: '<textinput type="textfield">',
         correctOption: '<input type="text">'
     },
     {
         question: 'What is the correct HTML for making a drop-down list?',
         option1: '<input type="list">',
         option2: '<list>',
-        option3: '<input type="dropdown">',
-        option4: '<select>',
+        option3: '<select>',
         correctOption: '<select>'
     },
     {
@@ -161,7 +156,6 @@ var css = [
         option1: 'Colorful Style Sheet',
         option2: 'Computer Style Sheet',
         option3: 'Cascading Style Sheet',
-        option4: 'Creative Style Sheet',
         correctOption: 'Cascading Style Sheet'
     },
     {
@@ -190,7 +184,6 @@ var css = [
         option1: 'styles',
         option2: 'font',
         option3: 'style',
-        option3: 'class',
         correctOption: 'style'
     },
     {
@@ -198,7 +191,6 @@ var css = [
         option1: 'body{color: black;}',
         option2: '{body:color=black;}',
         option3: 'body:color=black;',
-        option4: '{body;color:black;}',
         correctOption: 'body{color: black;}'
     },
     {
@@ -206,7 +198,6 @@ var css = [
         option1: '/*this is a comment*/',
         option2: '//this is a comment',
         option3: '//this is a comment//',
-        option3: "'this is a comment",
         correctOption: '/*this is a comment*/'
     },
     {
@@ -235,7 +226,6 @@ var css = [
         option1: 'font-size',
         option2: 'text-style',
         option3: 'text-size',
-        option4: 'font-style',
         correctOption: 'font-size'
     },
     {
@@ -243,15 +233,13 @@ var css = [
         option1: 'p {font-weight:bold;}',
         option2: '<p style="font-size:bold;">',
         option3: '<p style="text-size:bold;">',
-        option4: 'p {text-size:bold;}',
         correctOption: 'p {font-weight:bold;}'
     },
     {
         question: 'How do you display hyperlinks without an underline?',
         option1: 'a {underline:none;}',
         option2: 'a {decoration:no-underline;}',
-        option3: 'a {text-decoration:no-underline;}',
-        option4: 'a {text-decoration:none;}',
+        option3: 'a {text-decoration:none;}',
         correctOption: 'a {text-decoration:none;}'
     },
     {
@@ -259,7 +247,6 @@ var css = [
         option1: 'text-style:capitalize',
         option2: 'text-transform:capitalize',
         option3: 'You can not do that with CSS',
-        option4: 'transform:capitalize',
         correctOption: 'text-style:capitalize'
     },
     {
@@ -284,10 +271,11 @@ var css = [
         correctOption: 'margin-left'
     },
     {
-        question: 'When using the padding property; are you allowed to use negative values?',
-        option1: 'Yes',
-        option2: 'No',
-        correctOption: 'No'
+        question: 'Which of the following CSS framework is used to create a responsive design?',
+        option1: 'django',
+        option2: 'rails',
+        option3: 'bootstrap',
+        correctOption: 'bootstrap'
     },
     {
         question: 'How do you make a list that lists its items with squares?',
@@ -301,7 +289,6 @@ var css = [
         option1: '#demo',
         option2: '.demo',
         option3: 'demo',
-        option4: '*demo',
         correctOption: '#demo'
     }
 ]
@@ -310,12 +297,11 @@ var css = [
 
 var javaScript = [
     {
-        question: 'Inside which HTML element do we put the JavaScript?',
-        option1: '<scprit>',
-        option2: '<javascript>',
-        option3: '<js>',
-        option4: '<scripting>',
-        correctOption: '<script>'
+        question: 'What is JavaScript?',
+        option1: ' JavaScript is a scripting language used to make the website interactive',
+        option2: 'JavaScript is an assembly language used to make the website interactive',
+        option3: 'JavaScript is a compiled language used to make the website interactive',
+        correctOption: 'JavaScript is a scripting language used to make the website interactive'
     },
     {
         question: 'Where is the correct place to insert a JavaScript?',
@@ -332,10 +318,11 @@ var javaScript = [
         correctOption: '<scripr src="xxx.js">'
     },
     {
-        question: 'The external JavaScript file must contain the <script> tag.',
-        option1: 'False',
-        option2: 'True',
-        correctOption: 'False'
+        question: 'Which of the following is not a framework?',
+        option1: 'JavaScript .NET',
+        option2: 'JavaScript',
+        option3: 'jQuery',
+        correctOption: 'JavaScript'
     },
     {
         question: 'How do you write "Hello World" in an alert box?',
@@ -364,7 +351,6 @@ var javaScript = [
         option1: 'if i = 5',
         option2: 'if(i == 5)',
         option3: 'if i == 5 then',
-        option4: 'if i = 5 then',
         correctOption: 'if(i == 5)'
     },
     {
@@ -372,7 +358,6 @@ var javaScript = [
         option1: 'if =! 5 then',
         option2: 'if(i != 5)',
         option3: 'if i <> 5',
-        option4: 'if(i <> 5)',
         correctOption: 'if(i != 5)'
     },
     {
@@ -387,7 +372,6 @@ var javaScript = [
         option1: 'for (i = 0; i <= 5; i++)',
         option2: 'for (i <= 5; i++)',
         option3: 'for i = 1 to 5',
-        option4: 'for (i = 0; i <= 5)',
         correctOption: 'for (i = 0; i <= 5; i++)'
     },
     {
@@ -401,37 +385,36 @@ var javaScript = [
         question: 'What is the correct way to write a JavaScript array?',
         option1: 'var colors = "red", "green", "blue"',
         option2: 'var colors = (1:"red", 2:"green", 3:"blue")',
-        option3: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")',
-        option4: 'var colors = ["red", "green", "blue"]',
+        option3: 'var colors = ["red", "green", "blue"]',
         correctOption: 'var colors = ["red", "green", "blue"]'
     },
     {
         question: 'How do you round the number 7.25, to the nearest integer?',
         option1: 'round(7.25)',
         option2: 'rnd(7.25)',
-        option3: 'Math.rnd(7.25)',
-        option4: 'Math.round(7.25)',
+        option3: 'Math.round(7.25)',
         correctOption: 'Math.round(7.25)'
     },
     {
         question: 'How do you find the number with the highest value of x and y?',
         option1: 'ceil(x, y)',
         option2: 'top(x, y)',
-        option3: 'Math.ceil(x ,y)',
-        option4: 'Math.max(x, y)',
+        option3: 'Math.max(x, y)',
         correctOption: 'Math.max(x, y)'
     },
     {
-        question: 'What is the correct JavaScript syntax for opening a new window called "w2" ?',
-        option1: 'w2 = window.open("http://www.w3schools.com");',
-        option2: 'w2 = window.new("http://www.w3schools.com");',
-        correctOption: 'w2 = window.open("http://www.w3schools.com");'
+        question: 'Which of the following is not an error in JavaScript?',
+        option1: 'Missing of Bracket',
+        option2: 'Division by zero',
+        option3: 'Syntax error',
+        correctOption: 'Division by zero'
     },
     {
-        question: 'JavaScript is the same as Java.',
-        option1: 'True',
-        option2: 'False',
-        correctOption: "False"
+        question: 'Which of the following is correct about JavaScript?',
+        option1: 'JavaScript is an Object-Based language',
+        option2: 'JavaScript is Assembly-language',
+        option3: 'JavaScript is an Object-Oriented language',
+        correctOption: "JavaScript is an Object-Based language"
     },
     {
         question: "How can you detect the client's browser name?",
@@ -445,7 +428,6 @@ var javaScript = [
         option1: 'onclick',
         option2: 'onmouseclick',
         option3: 'onchange',
-        option4: 'onmouseover',
         correctOption: 'onclick'
     },
     {
@@ -468,11 +450,11 @@ var option2 = document.getElementById("option2");
 var option3 = document.getElementById("option3");
 
 
+
 function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-    // body.style.backgroundColor = "#0e4d1a";
-    
+
 }
 function nextQuestion(subject) {
     index++
@@ -545,7 +527,40 @@ function cssQuizShow() {
         </div>
         </div>
     `
-    
+
+}
+
+
+function javaScriptQuizShow() {
+    buttonHide();
+    quizMateriel.innerHTML = `
+    <div class="card card-size">
+    <h5 class="card-header">HTML Quiz</h5>
+    <div class="card-body card-inside">
+        <h5 id="question" class="card-title">${javaScript[index].question}</h5>
+        <div>
+            <label>
+                <input type="radio" name="answer" id="">
+                <span id="option1">${javaScript[index].option1}</span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="answer" id="">
+                <span id="option2">${javaScript[index].option2}</span>
+            </label>
+            </div>
+        <div>
+        <label>
+        <input type="radio" name="answer" id="">
+        <span id="option3">${javaScript[index].option3}</span>
+        </label>
+        </div>
+        <button onclick="nextQuestion(javaScript)" class="btn btn-primary">NEXT</button>
+        </div>
+        </div>
+    `
+
 }
 
 

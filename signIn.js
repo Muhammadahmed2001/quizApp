@@ -6,11 +6,8 @@ function signIn() {
     var newUserEmail = localStorage.getItem("email");
     var newUserpassword = localStorage.getItem("password");
     if (newUserEmail === userEmail && newUserpassword === userPassword) {
+        
         window.location.replace("quiz.html");
-        Swal.fire({
-            icon: 'success',
-            title: 'successful login',
-        })
     } else {
         Swal.fire({
             icon: 'error',
@@ -18,6 +15,6 @@ function signIn() {
             text: 'Please enter valid email address or password',
         })
     }
-
+    
     event.preventDefault();
 }
