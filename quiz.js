@@ -448,8 +448,17 @@ var question = document.getElementById("question")
 var option1 = document.getElementById("option1");
 var option2 = document.getElementById("option2");
 var option3 = document.getElementById("option3");
+var answer = document.getElementsByName("answer");
 
 
+function nextBtnEnable() {
+    var nextBtn = document.getElementById("next_btn");
+    if(nextBtn.disabled === true){
+    nextBtn.disabled = false;
+}else{
+    nextBtn.disabled = true
+}  
+};
 
 function buttonHide() {
     heading.style.display = "none";
@@ -457,43 +466,85 @@ function buttonHide() {
 
 }
 function nextQuestion(subject) {
-    index++
-    document.getElementById("question").innerText = subject[index].question;
-    document.getElementById("option1").innerText = subject[index].option1;
-    document.getElementById("option2").innerText = subject[index].option2;
-    document.getElementById("option3").innerText = subject[index].option3;
+    nextBtnEnable()
+    for (var i = 0; i < answer.length ; i++) {
+        answer[i].checked = false ;
+    };
+    if(index > subject.length - 2){
+        console.log("End")
+    }else{
+        index++
+        document.getElementById("question").innerText = subject[index].question;
+        document.getElementById("option1").innerText = subject[index].option1;
+        document.getElementById("option2").innerText = subject[index].option2;
+        document.getElementById("option3").innerText = subject[index].option3;
+    }
 }
 
+
+
 var quizMateriel = document.getElementById("quiz_materiel")
+function javaScriptQuizShow() {
+    buttonHide();
+    
+    quizMateriel.innerHTML = `
+    <div class="card card-size">
+    <h5 class="card-header">Java Script Quiz</h5>
+    <div class="card-body card-inside">
+            <h5 id="question" class="card-title">${javaScript[index].question}</h5>
+            <div>
+                <label>
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                    <span id="option1">${javaScript[index].option1}</span>
+                </label>
+            </div>
+            <div>
+            <label>
+                    <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                    <span id="option2">${javaScript[index].option2}</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                    <span id="option3">${javaScript[index].option3}</span>
+                </label>
+            </div>
+            <button disabled id="next_btn" onclick="nextQuestion(javaScript)" class="btn btn-primary">NEXT</button>
+        </div>
+    </div>
+    ` 
+}
 function htmlQuizShow() {
     buttonHide();
     quizMateriel.innerHTML = `
     <div class="card card-size">
-            <h5 class="card-header">HTML Quiz</h5>
-            <div class="card-body card-inside">
-                <h5 id="question" class="card-title">${html[index].question}</h5>
-                <div>
-                    <label>
-                        <input type="radio" name="answer" id="">
-                        <span id="option1">${html[index].option1}</span>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="answer" id="">
-                        <span id="option2">${html[index].option2}</span>
-                    </label>
-                    </div>
-                <div>
-                <label>
-                <input type="radio" name="answer" id="">
+    <h5 class="card-header">HTML Quiz</h5>
+    <div class="card-body card-inside">
+        <h5 id="question" class="card-title">${html[index].question}</h5>
+        <div>
+            <label>
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <span id="option1">${html[index].option1}</span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <span id="option2">${html[index].option2}</span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
                 <span id="option3">${html[index].option3}</span>
-                </label>
-                </div>
-                <button onclick="nextQuestion(html)" class="btn btn-primary">NEXT</button>
-                </div>
-                </div>
-                `
+            </label>
+        </div>
+        <button disabled id="next_btn" onclick="nextQuestion(html)" class="btn btn-primary">NEXT</button>
+    </div>
+</div>
+
+    `
 }
 
 
@@ -502,70 +553,39 @@ function cssQuizShow() {
     buttonHide();
     quizMateriel.innerHTML = `
     <div class="card card-size">
-    <h5 class="card-header">HTML Quiz</h5>
+    <h5 class="card-header">CSS Quiz</h5>
     <div class="card-body card-inside">
         <h5 id="question" class="card-title">${css[index].question}</h5>
         <div>
             <label>
-                <input type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
                 <span id="option1">${css[index].option1}</span>
             </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
                 <span id="option2">${css[index].option2}</span>
             </label>
-            </div>
-        <div>
-        <label>
-        <input type="radio" name="answer" id="">
-        <span id="option3">${css[index].option3}</span>
-        </label>
-        </div>
-        <button onclick="nextQuestion(css)" class="btn btn-primary">NEXT</button>
-        </div>
-        </div>
-    `
-
-}
-
-
-function javaScriptQuizShow() {
-    buttonHide();
-    quizMateriel.innerHTML = `
-    <div class="card card-size">
-    <h5 class="card-header">HTML Quiz</h5>
-    <div class="card-body card-inside">
-        <h5 id="question" class="card-title">${javaScript[index].question}</h5>
-        <div>
-            <label>
-                <input type="radio" name="answer" id="">
-                <span id="option1">${javaScript[index].option1}</span>
-            </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="answer" id="">
-                <span id="option2">${javaScript[index].option2}</span>
+                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <span id="option3">${css[index].option3}</span>
             </label>
-            </div>
-        <div>
-        <label>
-        <input type="radio" name="answer" id="">
-        <span id="option3">${javaScript[index].option3}</span>
-        </label>
         </div>
-        <button onclick="nextQuestion(javaScript)" class="btn btn-primary">NEXT</button>
-        </div>
-        </div>
-    `
-
+        <button disabled id="next_btn" onclick="nextQuestion(css)" class="btn btn-primary">NEXT</button>
+    </div>
+</div>
+`
+        
 }
 
 
-function name(params) {
+
+
+// function name(params) {
     
-}
+// }
 
 
