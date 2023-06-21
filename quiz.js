@@ -448,28 +448,24 @@ var question = document.getElementById("question")
 var option1 = document.getElementById("option1");
 var option2 = document.getElementById("option2");
 var option3 = document.getElementById("option3");
-var answer = document.getElementsByName("answer");
 
 
 function nextBtnEnable() {
     var nextBtn = document.getElementById("next_btn");
     if(nextBtn.disabled === true){
-    nextBtn.disabled = false;
-}else{
-    nextBtn.disabled = true
-}  
+        nextBtn.disabled = false;
+    }else{
+        nextBtn.disabled = true
+    }  
 };
 
 function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-
+    
 }
 function nextQuestion(subject) {
     nextBtnEnable()
-    for (var i = 0; i < answer.length ; i++) {
-        answer[i].checked = false ;
-    };
     if(index > subject.length - 2){
         console.log("End")
     }else{
@@ -479,6 +475,13 @@ function nextQuestion(subject) {
         document.getElementById("option2").innerText = subject[index].option2;
         document.getElementById("option3").innerText = subject[index].option3;
     }
+    var answer = document.getElementsByName("answer");
+    for (var i = 0; i < answer.length ; i++) {
+        if(answe[i].checked){
+            console.log(answer[i])
+        };
+        answer[i].checked = false ;
+    };
 }
 
 
@@ -581,8 +584,8 @@ function cssQuizShow() {
         
 }
 
-function name(params) {
+// function name(params) {
     
-}
+// }
 
 
