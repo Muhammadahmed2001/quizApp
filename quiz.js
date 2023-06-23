@@ -470,7 +470,8 @@ function nextQuestion(subject) {
     var answer = document.getElementsByName("answer");
     for (var i = 0; i < answer.length ; i++) {
         if(answer[i].checked){
-            console.log(subject[index][`option${i+1}`])
+            console.log(answer[i].value)
+            // console.log(subject[index][`option${i+1}`])
         };
         answer[i].checked = false ;
     };
@@ -498,19 +499,19 @@ function javaScriptQuizShow() {
             <h5 id="question" class="card-title">${javaScript[index].question}</h5>
             <div>
                 <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" type="radio" value="1" name="answer" id="">
                     <span id="option1">${javaScript[index].option1}</span>
                 </label>
             </div>
             <div>
             <label>
-                    <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                    <input onclick="nextBtnEnable()" type="radio" value="2" name="answer" id="">
                     <span id="option2">${javaScript[index].option2}</span>
                 </label>
             </div>
             <div>
                 <label>
-                    <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                    <input onclick="nextBtnEnable()" type="radio" value="3" name="answer" id="">
                     <span id="option3">${javaScript[index].option3}</span>
                 </label>
             </div>
@@ -528,19 +529,19 @@ function htmlQuizShow() {
         <h5 id="question" class="card-title">${html[index].question}</h5>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="1" type="radio" name="answer" id="">
                 <span id="option1">${html[index].option1}</span>
             </label>
         </div>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="2" type="radio" name="answer" id="">
                 <span id="option2">${html[index].option2}</span>
             </label>
         </div>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="3" type="radio" name="answer" id="">
                 <span id="option3">${html[index].option3}</span>
             </label>
         </div>
@@ -562,19 +563,19 @@ function cssQuizShow() {
         <h5 id="question" class="card-title">${css[index].question}</h5>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="1" type="radio" name="answer" id="">
                 <span id="option1">${css[index].option1}</span>
             </label>
         </div>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="2" type="radio" name="answer" id="">
                 <span id="option2">${css[index].option2}</span>
             </label>
         </div>
         <div>
             <label>
-                <input onclick="nextBtnEnable()" type="radio" name="answer" id="">
+                <input onclick="nextBtnEnable()" value="3" type="radio" name="answer" id="">
                 <span id="option3">${css[index].option3}</span>
             </label>
         </div>
