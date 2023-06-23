@@ -470,8 +470,10 @@ function nextQuestion(subject) {
     var answer = document.getElementsByName("answer");
     for (var i = 0; i < answer.length ; i++) {
         if(answer[i].checked){
-            console.log(answer[i].value)
-            // console.log(subject[index][`option${i+1}`])
+            var selected = answer[i].value
+            var userAnswer = subject[index][`option${selected}`]
+            console.log(userAnswer)
+            console.log(subject[index].correctOption)
         };
         answer[i].checked = false ;
     };
@@ -491,7 +493,6 @@ function nextQuestion(subject) {
 var quizMateriel = document.getElementById("quiz_materiel")
 function javaScriptQuizShow() {
     buttonHide();
-    
     quizMateriel.innerHTML = `
     <div class="card card-size">
     <h5 class="card-header">Java Script Quiz</h5>
