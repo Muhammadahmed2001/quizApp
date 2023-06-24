@@ -439,7 +439,7 @@ var javaScript = [
     }
 
 ]
-
+var score = 0;
 var index = 0;
 var buttonDiv = document.getElementById("button_div");
 var heading = document.getElementById("heading");
@@ -452,34 +452,37 @@ var option3 = document.getElementById("option3");
 
 function nextBtnEnable() {
     var nextBtn = document.getElementById("next_btn");
-    if(nextBtn.disabled === true){
+    if (nextBtn.disabled === true) {
         nextBtn.disabled = false;
-    }else{
+    } else {
         nextBtn.disabled = true
-    }  
+    }
 };
 
 function buttonHide() {
     heading.style.display = "none";
     buttonDiv.style.display = "none";
-    
+
 }
 function nextQuestion(subject) {
     nextBtnEnable()
-    
+
     var answer = document.getElementsByName("answer");
-    for (var i = 0; i < answer.length ; i++) {
-        if(answer[i].checked){
+    for (var i = 0; i < answer.length; i++) {
+        if (answer[i].checked) {
             var selected = answer[i].value
             var userAnswer = subject[index][`option${selected}`]
-            console.log(userAnswer)
-            console.log(subject[index].correctOption)
+            var correctAnswer = subject[index].correctOption
+            if (userAnswer == correctAnswer) {
+                score++
+            }
+
         };
-        answer[i].checked = false ;
+        answer[i].checked = false;
     };
-    if(index > subject.length - 2){
-        console.log("End")
-    }else{
+    if (index > subject.length - 2) {
+        console.log(Math.round((score / subject.length) * 100)+"%");
+    } else {
         index++
         document.getElementById("question").innerText = subject[index].question;
         document.getElementById("option1").innerText = subject[index].option1;
@@ -519,7 +522,7 @@ function javaScriptQuizShow() {
             <button disabled id="next_btn" onclick="nextQuestion(javaScript)" class="btn btn-primary">NEXT</button>
         </div>
     </div>
-    ` 
+    `
 }
 function htmlQuizShow() {
     buttonHide();
@@ -584,7 +587,7 @@ function cssQuizShow() {
     </div>
 </div>
 `
-        
+
 }
 
 

@@ -279,6 +279,7 @@ h2 {
 
 .quiz-materiel {
   width: 70%;
+  word-wrap: break-word;
 }
 
 .card-size {
