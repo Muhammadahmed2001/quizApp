@@ -1,10 +1,3 @@
-Swal.fire({
-    icon: 'success',
-    title: 'successful login',
-})
-
-
-
 var html = [
     {
         question: 'What does HTML stand for?',
@@ -76,76 +69,76 @@ var html = [
         option3: '<a href="url" target="_blank">',
         correctOption: '<a href="url" target="_blank">'
     },
-    {
-        question: 'Which of these elements are all <table> elements?',
-        option1: '<table> <tr> <td>',
-        option2: '<table> <head> <tfoot>',
-        option3: '<table> <tr> <tt>',
-        correctOption: "<table> <tr> <td>"
-    },
-    {
-        question: 'Who is the father of HTML?',
-        option1: 'Rasmus Lerdorf',
-        option2: 'Tim Berners-Lee',
-        option3: 'Sergey Brin',
-        correctOption: "Tim Berners-Lee"
-    },
-    {
-        question: "How can you make a numbered list?",
-        option1: '<list>',
-        option2: '<ul>',
-        option3: '<ol>',
-        correctOption: "<ol>"
-    },
-    {
-        question: 'How can you make a bulleted list?',
-        option1: '<ol>',
-        option2: '<list>',
-        option3: '<ul>',
-        correctOption: "<ul>"
-    },
-    {
-        question: 'What is the correct HTML for inserting an image?',
-        option1: '<img alt="MyImage">image.gif</img>',
-        option2: '<img href="image.gif" alt="MyImage">',
-        option3: '<img src="image.gif" alt="MyImage">',
-        correctOption: '<img src="image.gif" alt="MyImage">'
-    },
-    {
-        question: 'What is the correct HTML for making a checkbox?',
-        option1: '<iput type="check">',
-        option2: '<check>',
-        option3: '<input type="checkbox">',
-        correctOption: '<input type="checkbox">'
-    },
-    {
-        question: "What is the correct HTML for making a text input field?",
-        option1: '<input type="textfield">',
-        option2: '<input type="text">',
-        option3: '<textfield>',
-        correctOption: '<input type="text">'
-    },
-    {
-        question: 'What is the correct HTML for making a drop-down list?',
-        option1: '<input type="list">',
-        option2: '<list>',
-        option3: '<select>',
-        correctOption: '<select>'
-    },
-    {
-        question: 'What is the correct HTML for making a text area?',
-        option1: '<input type="textbox">',
-        option2: '<input type="textarea">',
-        option3: '<textarea>',
-        correctOption: '<textarea>'
-    },
-    {
-        question: 'What is the correct HTML for inserting a background image?',
-        option1: '<background img="background.gif">',
-        option2: '<body bg="background.gif">',
-        option3: '<body style="background-image:url(background.gif)">',
-        correctOption: '<body style="background-image:url(background.gif)">'
-    }
+    // {
+    //     question: 'Which of these elements are all <table> elements?',
+    //     option1: '<table> <tr> <td>',
+    //     option2: '<table> <head> <tfoot>',
+    //     option3: '<table> <tr> <tt>',
+    //     correctOption: "<table> <tr> <td>"
+    // },
+    // {
+    //     question: 'Who is the father of HTML?',
+    //     option1: 'Rasmus Lerdorf',
+    //     option2: 'Tim Berners-Lee',
+    //     option3: 'Sergey Brin',
+    //     correctOption: "Tim Berners-Lee"
+    // },
+    // {
+    //     question: "How can you make a numbered list?",
+    //     option1: '<list>',
+    //     option2: '<ul>',
+    //     option3: '<ol>',
+    //     correctOption: "<ol>"
+    // },
+    // {
+    //     question: 'How can you make a bulleted list?',
+    //     option1: '<ol>',
+    //     option2: '<list>',
+    //     option3: '<ul>',
+    //     correctOption: "<ul>"
+    // },
+    // {
+    //     question: 'What is the correct HTML for inserting an image?',
+    //     option1: '<img alt="MyImage">image.gif</img>',
+    //     option2: '<img href="image.gif" alt="MyImage">',
+    //     option3: '<img src="image.gif" alt="MyImage">',
+    //     correctOption: '<img src="image.gif" alt="MyImage">'
+    // },
+    // {
+    //     question: 'What is the correct HTML for making a checkbox?',
+    //     option1: '<iput type="check">',
+    //     option2: '<check>',
+    //     option3: '<input type="checkbox">',
+    //     correctOption: '<input type="checkbox">'
+    // },
+    // {
+    //     question: "What is the correct HTML for making a text input field?",
+    //     option1: '<input type="textfield">',
+    //     option2: '<input type="text">',
+    //     option3: '<textfield>',
+    //     correctOption: '<input type="text">'
+    // },
+    // {
+    //     question: 'What is the correct HTML for making a drop-down list?',
+    //     option1: '<input type="list">',
+    //     option2: '<list>',
+    //     option3: '<select>',
+    //     correctOption: '<select>'
+    // },
+    // {
+    //     question: 'What is the correct HTML for making a text area?',
+    //     option1: '<input type="textbox">',
+    //     option2: '<input type="textarea">',
+    //     option3: '<textarea>',
+    //     correctOption: '<textarea>'
+    // },
+    // {
+    //     question: 'What is the correct HTML for inserting a background image?',
+    //     option1: '<background img="background.gif">',
+    //     option2: '<body bg="background.gif">',
+    //     option3: '<body style="background-image:url(background.gif)">',
+    //     correctOption: '<body style="background-image:url(background.gif)">'
+    // }
 ]
 
 
@@ -298,7 +291,7 @@ var css = [
 var javaScript = [
     {
         question: 'What is JavaScript?',
-        option1: ' JavaScript is a scripting language used to make the website interactive',
+        option1: 'JavaScript is a scripting language used to make the website interactive',
         option2: 'JavaScript is an assembly language used to make the website interactive',
         option3: 'JavaScript is a compiled language used to make the website interactive',
         correctOption: 'JavaScript is a scripting language used to make the website interactive'
@@ -475,13 +468,31 @@ function nextQuestion(subject) {
             var correctAnswer = subject[index].correctOption
             if (userAnswer == correctAnswer) {
                 score++
-            }
 
+            }
         };
         answer[i].checked = false;
     };
     if (index > subject.length - 2) {
-        console.log(Math.round((score / subject.length) * 100)+"%");
+        var finalScore = Math.round((score / subject.length) * 100)
+        console.log(finalScore)
+        if (finalScore >= 60) {
+            Swal.fire({
+                icon: 'success',
+                title: finalScore + "%",
+                text: 'Congratulations on the success of the Quiz',
+                footer: '<a href="quiz.html">Back to home page</a>'
+            })
+       
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: finalScore + "%",
+                text: 'Sorry you failed, please try again later',
+                footer: '<a href="quiz.html">Back to home page</a>'
+            })
+        }
+        quizMateriel.style.display = "none";
     } else {
         index++
         document.getElementById("question").innerText = subject[index].question;
@@ -490,13 +501,10 @@ function nextQuestion(subject) {
         document.getElementById("option3").innerText = subject[index].option3;
     }
 }
-
-
-
 var quizMateriel = document.getElementById("quiz_materiel")
 function javaScriptQuizShow() {
     buttonHide();
-    quizMateriel.innerHTML = `
+    quizMateriel.innerHTML = ` 
     <div class="card card-size">
     <h5 class="card-header">Java Script Quiz</h5>
     <div class="card-body card-inside">
